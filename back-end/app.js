@@ -40,6 +40,18 @@ app.get('/messages', async (req, res) => {
   }
 })
 
+app.get('/about', (req, res) => {
+  res.json({
+    name: "Amish Vandse",
+    bio: [
+      "I'm a Computer Science student at NYU passionate about software engineering",
+      "I've worked on full-stack applications, contributed to aerospace payload systems, and built GenAI pipelines during internships.",
+      "Beyond tech, I love wildlife photography, and hiking."
+    ],
+    imageUrl: "http://localhost:7002/IMG_1919.jpeg"
+  })
+})
+
 // a route to handle fetching a single message by its id
 app.get('/messages/:messageId', async (req, res) => {
   // load all messages from database

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+import About from './About'
 import Messages from './Messages'
 import MessageStandalone from './MessageStandalone'
 import Home from './Home'
@@ -24,6 +25,7 @@ const App = props => {
               path="/messages/:messageId"
               element={<MessageStandalone />}
             />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
         <Footer />
